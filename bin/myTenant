@@ -1,0 +1,15 @@
+{
+"schemas": [
+"urn:ietf:params:scim:schemas:wavity:core:2.0:Tenant"
+],
+"tenantName": "tenant1",
+"tenantDescription": "Aman Inc.",
+"country": "IND",
+"state": "TS",
+"provisioned": "false",
+"userName": "amanullahm@wavity.com",
+"name": {
+"familyName": "Aman",
+"givenName": "khan"
+}
+}
