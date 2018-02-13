@@ -1,5 +1,6 @@
 #!/bin/bash
 
+cd $cloudrepo/docker
 setup(){
   echo "--copy java-cas-client.properties--"
   sudo cp bin/ot-cas-client.properties /etc/java-cas-client.properties
@@ -11,7 +12,6 @@ stopPostgresql(){
 }
 
 buildDockerImages(){
-  cd $cloudrepo/docker
   gradle bust
   echo "---building and starting docker images ---"
   echo "docker-compose -f docker-compose-ub.yml build"
@@ -22,8 +22,6 @@ buildDockerImages(){
 }
 
 startDockerImages(){
-  cd $cloudrepo/docker
-  echo $cloudrepo
   echo "----starting docker images file----"
   echo "docker-compose -f docker-compose-ub.yml up -d"
   docker-compose -f docker-compose-ub.yml up -d
@@ -64,7 +62,6 @@ restartscimcas(){
   }
 
   copyTenantInfo(){
-    less bin/myTenant | xclip -selection clipboard
     echo "copied tenant to clip board"
     echo "---tenant information---"
     cat bin/myTenant
