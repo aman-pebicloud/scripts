@@ -72,7 +72,7 @@ restartscimcas(){
 case "$1" in
   all)
     setup
-    stopPostgresql
+    #stopPostgresql
     buildDockerImages
     startDockerImages
     buildDistributions

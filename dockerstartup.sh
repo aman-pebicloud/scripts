@@ -4,6 +4,7 @@ export SERVICES=$cloudrepo/docker/docker-compose-caslocal.yml
 # export SERVICES=$cloudrepo/docker/docker-compose-scimlocal.yml
 export LDAP=$cloudrepo/docker/docker-compose-dev-ldap.yml
 export REDIS=$cloudrepo/docker/redis.yml
+export something;
 export LDAP_HOST_IP=${ONETEAM_HOST_IP}
 export REDIS_HOST_IP=${ONETEAM_HOST_IP}
 export SCIM_HOST_IP=${ONETEAM_HOST_IP}
